@@ -1,0 +1,3 @@
+{
+    "id": "servicetoservicedemo", "required-permissions": ["rexroth-device.all.rwx"]
+}

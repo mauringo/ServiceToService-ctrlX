@@ -1,0 +1,20 @@
+{
+    "$schema": "https://json-schema.boschrexroth.com/ctrlx-automation/ctrlx-core/apps/package-manifest/package-manifest.v1.schema.json",
+    "id": "servicetoservicedemo",
+    "services": {
+        "proxyMapping": [{
+            "binding": ":9876",
+            "name": "ServicetoServicedemo",
+            "url": "/servicetoservicedemo"
+        }]
+    },
+    "menus": {
+        "sidebar": [{
+            "id": "servicetoservicedemo.run",
+            "title": "ServicetoServicedemo",
+            "link": "/servicetoservicedemo",
+            "icon": "bosch-ic-document-edit",
+            "target": "servicetoservicedemo"
+        }]
+    }
+}

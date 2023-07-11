@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=servicetoservicedemo
+Comment=servicetoservicedemo
+Exec=servicetoservicedemo.desktop-launch
+Icon=${SNAP}/meta/gui/icon.png
+Terminal=false
+Categories=Development;
