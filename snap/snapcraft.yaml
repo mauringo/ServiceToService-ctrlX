@@ -1,9 +1,9 @@
 name: servicetoservicedemo
-version: 0.1.0.0
+version: 0.1.1.0
 summary: servicetoservicedemo
 description: 'simple demo'
 
-base: core20
+base: core22
 confinement: strict
 grade: stable
 
@@ -43,26 +43,19 @@ parts:
 
     stage-packages:
       - wget
-      - git
-      - zip 
       - libssl-dev
       - libcurl4-openssl-dev
       - libcurl-dev
-      - pkg-config
-      - build-essential
-      - unzip
-      - python3-wheel
+      - curl
+
       
     python-packages:
-      - wheel
-      - requests
-      - flask
-      - werkzeug 
-      - jwcrypto
-      - six
+      - requests     # just this is needed for licensing
+      - flask        # just for app.py
+      - werkzeug     # just for app.py
+      - jwcrypto     # just for app.py
+      - six          # optional..
       - autopep8
-      - ctrlx_fbs
-      - ctrlx_datalayer
 
 
     build-packages:
@@ -71,15 +64,6 @@ parts:
       - build-essential
       - python3-setuptools
 
-
-
-
-  datalayerdeb:
-      plugin: dump
-      source: https://github.com/boschrexroth/ctrlx-automation-sdk/releases/download/1.18.0/ctrlx-datalayer-1.9.1.deb
-      source-type: deb
-      stage-packages:
-        - libzmq5
      
  
  
@@ -105,7 +89,10 @@ plugs:
     content: datalayer
     target: $SNAP_DATA/.datalayer 
 
-
+  licensing-service:
+    interface: content
+    content: licensing-service
+    target: $SNAP_DATA/licensing-service
 slots:
   secure-assets:
     interface: content

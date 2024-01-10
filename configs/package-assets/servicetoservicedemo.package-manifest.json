@@ -16,5 +16,19 @@
             "icon": "bosch-ic-document-edit",
             "target": "servicetoservicedemo"
         }]
-    }
+    },
+    "licenses": [
+        {
+          "name": "SWL-XCx-FRW-BASIC_FOOBAR-NNNN",
+          "title": "ctrlX CORE - Foobar License",
+          "description": "Unlock the App's functionality.",
+          "required": true
+        },
+        {
+          "name": "SWL-XCx-FRW-ADVANCED_FOOBAR",
+          "title": "ctrlX CORE - Foobar License Extension",
+          "description": "This license extends the functionality of the App.",
+          "required": false
+        }
+      ]
 }

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd cd $SNAP_DATA/service-token/servicetoservicedemo
+
+python3 $SNAP/bin/unlicense.py
